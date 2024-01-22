@@ -1,0 +1,103 @@
+html{
+    box-sizing: border-box;
+}
+body{
+    /* go to ui gradients to choose well customized gradients. */
+    background-image: radial-gradient( circle 674px at 18.3% 77%,  rgba(139,186,244,1) 3.4%, rgba(15,51,92,1) 56.6% );
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.calculator{
+    background:azure;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+}
+.display-calculator{
+    background: black;
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 10px 10px 0 0;
+}
+.display-calculator h1{
+    margin: 0;
+    padding: 25px;
+    font-size: 45px;
+    font-family: 'Lucida console, sans-serif';
+    font-weight: 100;
+    overflow-x: auto;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: azure;
+}
+::-webkit-scrollbar-thumb{
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover{
+    background:#555;
+}
+
+/* Buttons */
+.button-calculator{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    padding:10px
+}
+
+button{
+    min-height: 50px;
+    font-size: 20px;
+    font-weight:1000;
+    border:none;
+    border-radius:5px;
+    cursor: pointer;
+
+}
+button:hover{
+    filter: brightness(110%);
+}
+button:active{
+    transform:translateY(1px);
+}
+button:focus{
+    outline: none;
+}
+.operator{
+    background:rgb(18, 122, 88);
+}
+.clear{
+    background: rgb(216, 8, 8);
+    color: white;
+}
+.clear:hover{
+    filter: brightness(90%);
+}
+.equal-sign{
+
+    grid-column: -2;
+    /* grid start from row 2 and spanning 4 rows */
+    grid-row: 2 / span 4;
+    background: aqua;
+}
+.equal-sign:hover{
+    filter: brightness(90%);
+}
+
+/* media query for anything lessthan 600px*/
+@media screen and (max-width:600px) {
+    .calculator{
+        width: 95%;
+    }
+
+}
